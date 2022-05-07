@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vet Pet Software</title>
+    
+    <link rel="preload" href="css/normalize.css" as="style"><link rel="stylesheet" href="css/normalize.css">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap" rel="stylesheet">
+    <link rel="preload" href="css/buscarcirugia.css" as="style">
+    <link rel="stylesheet" href="css/buscarcirugia.css">
+</head>
+<body class="agrupar">
+    <main >
+       <div class="seccion-buscar">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                      <circle cx="10" cy="10" r="7" />
+                      <line x1="21" y1="21" x2="15" y2="15" />
+                </svg>
+                    
+                <input class="busqueda" type="search" placeholder="">
+                
+            </div>
+
+                <div class="boton1">
+                    <button>Buscar</button>
+                </div>
+                <div class="boton2">
+                    <button>Crear</button>
+                </div>
+                <div class="boton3">
+                    <button>Reporte</button>
+                </div>
+                
+       </div>
+
+       <div class="listado-propietarios">
+
+            <h3>Cirugías</h3>
+
+            <div>
+                <table class="tabla">
+                    <tr class="fila"><!--fila-->
+                         <th class="historia">Historia Clínica</th><!--columna-->
+                         <th class="fyhingreso">Fecha y hora de ingreso</th><!--columna-->
+                         <th class="paciente">Paciente</th><!--columna-->
+                         <th class="especie">Especie</th><!--columna-->
+                         <th class="raza">Raza</th><!--columna-->
+                         <th class="sexo">Sexo</th><!--columna-->
+                         <th class="medico">Médico</th><!--columna-->
+                         <th class="cirugia">Cirugía</th><!--columna-->
+                         <th class="estado">Estado Cirugía</th><!--columna-->
+                         <th class="propietario">Propietario</th><!--columna-->
+                         <th class="acciones">Acciones</th><!--columna--> 
+                    </tr>
+                    <tr class="fila"><!--fila-->
+                         <td></td><!--columna-->
+                         <td></td><!--columna-->
+                         <td></td><!--columna-->
+                         <td></td><!--columna-->
+                         <td></td><!--columna-->
+                         <td></td><!--columna-->
+                         <td></td><!--columna-->
+                         <td></td><!--columna-->
+                         <td class="contenedor-estado">
+	                         	<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-check" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+								  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+								  <path d="M5 12l5 5l10 -10" />
+								</svg>
+
+                         </td><!--columna-->
+                         <td></td><!--columna-->
+                         <td class="contenedor-acciones">
+                             <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-eye" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#0D4251" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                  <circle cx="12" cy="12" r="2" />
+                                  <path d="M22 12c-2.667 4.667 -6 7 -10 7s-7.333 -2.333 -10 -7c2.667 -4.667 6 -7 10 -7s7.333 2.333 10 7" />
+                            </svg>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-pencil" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#0D4251" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                  <path d="M4 20h4l10.5 -10.5a1.5 1.5 0 0 0 -4 -4l-10.5 10.5v4" />
+                                  <line x1="13.5" y1="6.5" x2="17.5" y2="10.5" />
+                            </svg>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#0D4251" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                  <circle cx="8" cy="12" r="2" />
+                                  <rect x="2" y="6" width="20" height="12" rx="6" />
+                            </svg>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle-plus" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#0D4251" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                  <circle cx="12" cy="12" r="9" />
+                                  <line x1="9" y1="12" x2="15" y2="12" />
+                                  <line x1="12" y1="9" x2="12" y2="15" />
+                            </svg>
+                        </td><!--columna-->
+                    </tr>
+
+                    <tr class="fila"><!--fila-->
+                         <td></td><!--columna-->
+                         <td></td><!--columna-->
+                         <td></td><!--columna-->
+                         <td></td><!--columna-->
+                         <td></td><!--columna-->
+                         <td></td><!--columna-->
+                         <td></td><!--columna-->
+                         <td></td><!--columna-->
+                         <td class="contenedor-estado">
+		                      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+								  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+								  <circle cx="12" cy="12" r="9" />
+								  <polyline points="12 7 12 12 15 15" />
+							</svg>
+						</td><!--columna-->
+                         <td></td><!--columna-->
+                         <td class="contenedor-acciones">
+                             <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-eye" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#0D4251" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                  <circle cx="12" cy="12" r="2" />
+                                  <path d="M22 12c-2.667 4.667 -6 7 -10 7s-7.333 -2.333 -10 -7c2.667 -4.667 6 -7 10 -7s7.333 2.333 10 7" />
+                            </svg>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-pencil" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#0D4251" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                  <path d="M4 20h4l10.5 -10.5a1.5 1.5 0 0 0 -4 -4l-10.5 10.5v4" />
+                                  <line x1="13.5" y1="6.5" x2="17.5" y2="10.5" />
+                            </svg>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#0D4251" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                  <circle cx="8" cy="12" r="2" />
+                                  <rect x="2" y="6" width="20" height="12" rx="6" />
+                            </svg>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle-plus" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#0D4251" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                  <circle cx="12" cy="12" r="9" />
+                                  <line x1="9" y1="12" x2="15" y2="12" />
+                                  <line x1="12" y1="9" x2="12" y2="15" />
+                            </svg>
+                        </td><!--columna-->
+                    </tr>
+
+                     <tr class="fila"><!--fila-->
+                         <td></td><!--columna-->
+                         <td></td><!--columna-->
+                         <td></td><!--columna-->
+                         <td></td><!--columna-->
+                         <td></td><!--columna-->
+                         <td></td><!--columna-->
+                         <td></td><!--columna-->
+                         <td></td><!--columna-->
+                         <td class="contenedor-estado">
+		                      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+								  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+								  <line x1="18" y1="6" x2="6" y2="18" />
+								  <line x1="6" y1="6" x2="18" y2="18" />
+							</svg>
+						</td><!--columna-->
+                         <td></td><!--columna-->
+                         <td class="contenedor-acciones">
+                             <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-eye" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#0D4251" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                  <circle cx="12" cy="12" r="2" />
+                                  <path d="M22 12c-2.667 4.667 -6 7 -10 7s-7.333 -2.333 -10 -7c2.667 -4.667 6 -7 10 -7s7.333 2.333 10 7" />
+                            </svg>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-pencil" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#0D4251" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                  <path d="M4 20h4l10.5 -10.5a1.5 1.5 0 0 0 -4 -4l-10.5 10.5v4" />
+                                  <line x1="13.5" y1="6.5" x2="17.5" y2="10.5" />
+                            </svg>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#0D4251" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                  <circle cx="8" cy="12" r="2" />
+                                  <rect x="2" y="6" width="20" height="12" rx="6" />
+                            </svg>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle-plus" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#0D4251" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                  <circle cx="12" cy="12" r="9" />
+                                  <line x1="9" y1="12" x2="15" y2="12" />
+                                  <line x1="12" y1="9" x2="12" y2="15" />
+                            </svg>
+                        </td><!--columna-->
+                    </tr>
+
+                    <tr class="fila"><!--fila-->
+                         <td></td><!--columna-->
+                         <td></td><!--columna-->
+                         <td></td><!--columna-->
+                         <td></td><!--columna-->
+                         <td></td><!--columna-->
+                         <td></td><!--columna-->
+                         <td></td><!--columna-->
+                         <td></td><!--columna-->
+                         <td class="contenedor-estado">
+	                         	<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-check" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+								  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+								  <path d="M5 12l5 5l10 -10" />
+								</svg>
+
+                         </td><!--columna-->
+                         <td></td><!--columna-->
+                         <td class="contenedor-acciones">
+                             <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-eye" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#0D4251" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                  <circle cx="12" cy="12" r="2" />
+                                  <path d="M22 12c-2.667 4.667 -6 7 -10 7s-7.333 -2.333 -10 -7c2.667 -4.667 6 -7 10 -7s7.333 2.333 10 7" />
+                            </svg>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-pencil" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#0D4251" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                  <path d="M4 20h4l10.5 -10.5a1.5 1.5 0 0 0 -4 -4l-10.5 10.5v4" />
+                                  <line x1="13.5" y1="6.5" x2="17.5" y2="10.5" />
+                            </svg>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#0D4251" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                  <circle cx="8" cy="12" r="2" />
+                                  <rect x="2" y="6" width="20" height="12" rx="6" />
+                            </svg>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle-plus" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#0D4251" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                  <circle cx="12" cy="12" r="9" />
+                                  <line x1="9" y1="12" x2="15" y2="12" />
+                                  <line x1="12" y1="9" x2="12" y2="15" />
+                            </svg>
+                        </td><!--columna-->
+                    </tr>
+
+                    <tr class="fila"><!--fila-->
+                         <td></td><!--columna-->
+                         <td></td><!--columna-->
+                         <td></td><!--columna-->
+                         <td></td><!--columna-->
+                         <td></td><!--columna-->
+                         <td></td><!--columna-->
+                         <td></td><!--columna-->
+                         <td></td><!--columna-->
+                         <td class="contenedor-estado">
+		                      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+								  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+								  <circle cx="12" cy="12" r="9" />
+								  <polyline points="12 7 12 12 15 15" />
+							</svg>
+						</td><!--columna-->
+                         <td></td><!--columna-->
+                         <td class="contenedor-acciones">
+                             <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-eye" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#0D4251" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                  <circle cx="12" cy="12" r="2" />
+                                  <path d="M22 12c-2.667 4.667 -6 7 -10 7s-7.333 -2.333 -10 -7c2.667 -4.667 6 -7 10 -7s7.333 2.333 10 7" />
+                            </svg>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-pencil" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#0D4251" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                  <path d="M4 20h4l10.5 -10.5a1.5 1.5 0 0 0 -4 -4l-10.5 10.5v4" />
+                                  <line x1="13.5" y1="6.5" x2="17.5" y2="10.5" />
+                            </svg>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#0D4251" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                  <circle cx="8" cy="12" r="2" />
+                                  <rect x="2" y="6" width="20" height="12" rx="6" />
+                            </svg>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle-plus" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#0D4251" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                  <circle cx="12" cy="12" r="9" />
+                                  <line x1="9" y1="12" x2="15" y2="12" />
+                                  <line x1="12" y1="9" x2="12" y2="15" />
+                            </svg>
+                        </td><!--columna-->
+                    </tr>
+
+                     <tr class="fila"><!--fila-->
+                         <td></td><!--columna-->
+                         <td></td><!--columna-->
+                         <td></td><!--columna-->
+                         <td></td><!--columna-->
+                         <td></td><!--columna-->
+                         <td></td><!--columna-->
+                         <td></td><!--columna-->
+                         <td></td><!--columna-->
+                         <td class="contenedor-estado">
+		                      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+								  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+								  <line x1="18" y1="6" x2="6" y2="18" />
+								  <line x1="6" y1="6" x2="18" y2="18" />
+							</svg>
+						</td><!--columna-->
+                         <td></td><!--columna-->
+                         <td class="contenedor-acciones">
+                             <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-eye" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#0D4251" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                  <circle cx="12" cy="12" r="2" />
+                                  <path d="M22 12c-2.667 4.667 -6 7 -10 7s-7.333 -2.333 -10 -7c2.667 -4.667 6 -7 10 -7s7.333 2.333 10 7" />
+                            </svg>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-pencil" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#0D4251" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                  <path d="M4 20h4l10.5 -10.5a1.5 1.5 0 0 0 -4 -4l-10.5 10.5v4" />
+                                  <line x1="13.5" y1="6.5" x2="17.5" y2="10.5" />
+                            </svg>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#0D4251" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                  <circle cx="8" cy="12" r="2" />
+                                  <rect x="2" y="6" width="20" height="12" rx="6" />
+                            </svg>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle-plus" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#0D4251" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                  <circle cx="12" cy="12" r="9" />
+                                  <line x1="9" y1="12" x2="15" y2="12" />
+                                  <line x1="12" y1="9" x2="12" y2="15" />
+                            </svg>
+                        </td><!--columna-->
+                    </tr>
+
+                    <tr class="fila"><!--fila-->
+                         <td></td><!--columna-->
+                         <td></td><!--columna-->
+                         <td></td><!--columna-->
+                         <td></td><!--columna-->
+                         <td></td><!--columna-->
+                         <td></td><!--columna-->
+                         <td></td><!--columna-->
+                         <td></td><!--columna-->
+                         <td class="contenedor-estado">
+	                         	<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-check" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+								  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+								  <path d="M5 12l5 5l10 -10" />
+								</svg>
+
+                         </td><!--columna-->
+                         <td></td><!--columna-->
+                         <td class="contenedor-acciones">
+                             <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-eye" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#0D4251" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                  <circle cx="12" cy="12" r="2" />
+                                  <path d="M22 12c-2.667 4.667 -6 7 -10 7s-7.333 -2.333 -10 -7c2.667 -4.667 6 -7 10 -7s7.333 2.333 10 7" />
+                            </svg>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-pencil" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#0D4251" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                  <path d="M4 20h4l10.5 -10.5a1.5 1.5 0 0 0 -4 -4l-10.5 10.5v4" />
+                                  <line x1="13.5" y1="6.5" x2="17.5" y2="10.5" />
+                            </svg>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#0D4251" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                  <circle cx="8" cy="12" r="2" />
+                                  <rect x="2" y="6" width="20" height="12" rx="6" />
+                            </svg>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle-plus" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#0D4251" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                  <circle cx="12" cy="12" r="9" />
+                                  <line x1="9" y1="12" x2="15" y2="12" />
+                                  <line x1="12" y1="9" x2="12" y2="15" />
+                            </svg>
+                        </td><!--columna-->
+                    </tr>
+
+                    <tr class="fila"><!--fila-->
+                         <td></td><!--columna-->
+                         <td></td><!--columna-->
+                         <td></td><!--columna-->
+                         <td></td><!--columna-->
+                         <td></td><!--columna-->
+                         <td></td><!--columna-->
+                         <td></td><!--columna-->
+                         <td></td><!--columna-->
+                         <td class="contenedor-estado">
+		                      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+								  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+								  <circle cx="12" cy="12" r="9" />
+								  <polyline points="12 7 12 12 15 15" />
+							</svg>
+						</td><!--columna-->
+                         <td></td><!--columna-->
+                         <td class="contenedor-acciones">
+                             <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-eye" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#0D4251" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                  <circle cx="12" cy="12" r="2" />
+                                  <path d="M22 12c-2.667 4.667 -6 7 -10 7s-7.333 -2.333 -10 -7c2.667 -4.667 6 -7 10 -7s7.333 2.333 10 7" />
+                            </svg>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-pencil" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#0D4251" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                  <path d="M4 20h4l10.5 -10.5a1.5 1.5 0 0 0 -4 -4l-10.5 10.5v4" />
+                                  <line x1="13.5" y1="6.5" x2="17.5" y2="10.5" />
+                            </svg>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#0D4251" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                  <circle cx="8" cy="12" r="2" />
+                                  <rect x="2" y="6" width="20" height="12" rx="6" />
+                            </svg>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle-plus" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#0D4251" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                  <circle cx="12" cy="12" r="9" />
+                                  <line x1="9" y1="12" x2="15" y2="12" />
+                                  <line x1="12" y1="9" x2="12" y2="15" />
+                            </svg>
+                        </td><!--columna-->
+                    </tr>
+
+                     <tr class="fila"><!--fila-->
+                         <td></td><!--columna-->
+                         <td></td><!--columna-->
+                         <td></td><!--columna-->
+                         <td></td><!--columna-->
+                         <td></td><!--columna-->
+                         <td></td><!--columna-->
+                         <td></td><!--columna-->
+                         <td></td><!--columna-->
+                         <td class="contenedor-estado">
+		                      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+								  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+								  <line x1="18" y1="6" x2="6" y2="18" />
+								  <line x1="6" y1="6" x2="18" y2="18" />
+							</svg>
+						</td><!--columna-->
+                         <td></td><!--columna-->
+                         <td class="contenedor-acciones">
+                             <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-eye" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#0D4251" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                  <circle cx="12" cy="12" r="2" />
+                                  <path d="M22 12c-2.667 4.667 -6 7 -10 7s-7.333 -2.333 -10 -7c2.667 -4.667 6 -7 10 -7s7.333 2.333 10 7" />
+                            </svg>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-pencil" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#0D4251" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                  <path d="M4 20h4l10.5 -10.5a1.5 1.5 0 0 0 -4 -4l-10.5 10.5v4" />
+                                  <line x1="13.5" y1="6.5" x2="17.5" y2="10.5" />
+                            </svg>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#0D4251" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                  <circle cx="8" cy="12" r="2" />
+                                  <rect x="2" y="6" width="20" height="12" rx="6" />
+                            </svg>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle-plus" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#0D4251" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                  <circle cx="12" cy="12" r="9" />
+                                  <line x1="9" y1="12" x2="15" y2="12" />
+                                  <line x1="12" y1="9" x2="12" y2="15" />
+                            </svg>
+                        </td><!--columna-->
+                    </tr>
+
+                </table>
+            </div>
+
+       </div>
+
+    </main>
+
+</body>
+</html>
